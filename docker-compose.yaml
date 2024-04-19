@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgis/postgis
+    restart: always
+    environment:
+      - POSTGRES_DB=gpx
+      - POSTGRES_USER=arbatov
+      - POSTGRES_PASSWORD=12345
+    ports:
+      - 5432:5432
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data:/data
+
+volumes:
+  postgis_data:
