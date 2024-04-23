@@ -1,9 +1,5 @@
-# postgis-experiments
-
-Experimenting with using PostGIS to query running data
-
-## Running
+# postgis
 
 ```
-docker compose up -d
+docker compose up
 ```
